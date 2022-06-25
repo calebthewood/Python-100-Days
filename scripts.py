@@ -34,3 +34,17 @@ def time_left():
     months_left =  years_left * 12
 
     print(f"If you live to 90, you have: \n{days_left} days, or\n{weeks_left} weeks, or\n{months_left} months left.")
+
+
+def tip_calculator():
+    """Takes bill total, tip percentage as an int, number of people via input
+    and returns the calculated total owed by each person"""
+
+    print("Welcome to the tip calculator!")
+    bill = int(input("What was the total bill?\n"))
+    tip = int(input("How much tip would you like to give? 12, 15, or 18?\n"))
+    guest_count = int(input("How many people to split the bill?\n"))
+    total_tip = 1 + (bill * tip) / 100
+    total = round((total_tip + bill) / guest_count, 2)
+    formatted_total = "{:.2f}".format(total)
+    print(f"Each person should pay: ${formatted_total}")
