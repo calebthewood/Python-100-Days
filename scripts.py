@@ -21,3 +21,16 @@ def bmiCalculator():
     weightInt = float(weight)
     bmi = int(weightInt / heightInt ** 2)
     print(bmi)
+
+
+def time_left():
+    """Day 2: Calculate your time left. Assumes life-expectancy of 90
+    Returns time left in days, weeks, and months."""
+
+    age = int(input("What is your current age?\n"))
+    years_left = 90 - age
+    days_left = years_left * 365
+    weeks_left = years_left * 52
+    months_left =  years_left * 12
+
+    print(f"If you live to 90, you have: \n{days_left} days, or\n{weeks_left} weeks, or\n{months_left} months left.")
