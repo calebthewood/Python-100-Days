@@ -13,3 +13,11 @@ def splitAndAdd():
     digit_2 = int(two_digit_number[1])
     print(digit_1 + digit_2)
 
+def bmiCalculator():
+    """Day 2: Takes height & weight by input and prints BMI"""
+    height = input("enter your height in m: ")
+    weight = input("enter your weight in kg: ")
+    heightInt = float(height)
+    weightInt = float(weight)
+    bmi = int(weightInt / heightInt ** 2)
+    print(bmi)
