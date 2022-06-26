@@ -110,3 +110,32 @@ def order_pizza():
     if extra_cheese == "Y":
         bill += 1
     print(f"Your final bill is: ${bill}")
+
+
+def love_calculator():
+    """Takes two names via input and returns your love score"""
+    print("Welcome to the Love Calculator!")
+
+    name1 = input("What is your name? \n")
+    name2 = input("What is their name? \n")
+    names = (name1 + name2).lower()
+    true = "true"
+    love = "love"
+    d1 = 0
+    d2 = 0
+
+    for char1 in true:
+        d1 += names.count(char1)
+    for char2 in love:
+        d2 += names.count(char2)
+
+    score = int(f"{d1}{d2}")
+    msg = f"Your score is {score}"
+
+    if score < 10 or score > 90:
+        msg += "you go together like coke and mentos."
+    elif score > 40 and score < 50:
+        msg += ", you are alright together."
+    else:
+        msg +="."
+    print(msg)
