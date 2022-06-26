@@ -48,3 +48,42 @@ def tip_calculator():
     total = round((total_tip + bill) / guest_count, 2)
     formatted_total = "{:.2f}".format(total)
     print(f"Each person should pay: ${formatted_total}")
+
+def is_even_is_odd():
+    """ Accepts num via input, determines if even or odd."""
+    number = int(input("Which number do you want to check? "))
+    result = "even" if number % 2 == 0 else "odd"
+    print(f"This is an {result} number.")
+
+def prognostic_bmi():
+    """ Calculates a BMI and diagnoses you"""
+    height = float(input("enter your height in m: "))
+    weight = float(input("enter your weight in kg: "))
+    bmi = int(weight // (height ** 2))
+    prognosis = f"Your BMI is {bmi}, you "
+
+    if bmi < 18.5:
+        prognosis += "are underweight."
+    elif bmi < 25:
+        prognosis += "have a normal weight."
+    elif bmi < 30:
+        prognosis += "are slightly overweight."
+    elif bmi < 35:
+        prognosis += "are obese."
+    elif bmi > 34:
+        prognosis += "are clinically obese."
+    else:
+        prognosis = "error"
+    print(prognosis)
+
+
+def check_for_leap_year():
+    """ Day 3: takes a year by input, checks for leap year. """
+    year = int(input("Which year do you want to check? "))
+    result = "Not leap year."
+
+    if year % 400 == 0:
+        result = "Leap year."
+    if year % 4 == 0 and year % 100 != 0:
+        result = "Leap year."
+    print(result)
