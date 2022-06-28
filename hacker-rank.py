@@ -14,3 +14,30 @@ def diagonalDifference(arr):
         i+=1
         j-=1
     return abs(left - right)
+
+
+def plusMinus(arr):
+    """
+    Accepts an array of integers, returns None.
+    Prints the ratio of postives, negatives, and zeroes
+    """
+    positive_count = 0
+    negative_count = 0
+    zero_count = 0
+
+    for num in arr:
+        if num > 0:
+            positive_count += 1
+        elif num < 0:
+            negative_count += 1
+        else:
+            zero_count += 1
+
+    total = positive_count + negative_count + zero_count
+    positive_ratio = round(positive_count / total, 6)
+    negative_ratio = round(negative_count / total, 6)
+    zero_ratio = round(zero_count / total, 6)
+
+    print(positive_ratio)
+    print(negative_ratio)
+    print(zero_ratio)

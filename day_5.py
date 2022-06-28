@@ -1,6 +1,7 @@
 
 def avg_student_height():
-    """ takes in a sequence of numbers via input
+    """
+    takes in a sequence of numbers via input
     and returns the average. No len() or sum()
     156 178 165 171 187 >>> 171
     """
