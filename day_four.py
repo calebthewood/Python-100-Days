@@ -45,51 +45,55 @@ def rock_paper_scissors():
     rock = '''
         _______
     ---'   ____)
-        (_____)
-        (_____)
-        (____)
+          (_____)
+          (_____)
+          (____)
     ---.__(___)
     '''
     paper = '''
         _______
     ---'   ____)____
-            ______)
-            _______)
-            _______)
+              ______)
+              _______)
+             _______)
     ---.__________)
     '''
     scissors = '''
         _______
     ---'   ____)____
-            ______)
-        __________)
-        (____)
+              ______)
+           __________)
+          (____)
     ---.__(___)
     '''
     choices = [rock, paper, scissors]
     player = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors."))
     computer = random.randint(0,2)
 
-    print("You chose:\n", choices[player])
-    print("Computer chose:\n", choices[computer])
-    if player == 0: #rock
-        if computer == 0:
-            print("You draw")
-        if computer == 1:
-            print("You lose")
-        if computer == 2:
-            print("You win")
-    elif player == 1: #paper
-        if computer == 0:
-            print("You win")
-        if computer == 1:
-            print("You draw")
-        if computer == 2:
-            print("You lose")
-    elif player == 2: #scissor
-        if computer == 0:
-            print("You lose")
-        if computer == 1:
-            print("You win")
-        if computer == 2:
-            print("You draw")
+    if player in [0,1,2]:
+        print("You chose:\n", choices[player])
+        print("Computer chose:\n", choices[computer])
+
+        if player == 0: #rock
+            if computer == 0:
+                print("You draw.")
+            if computer == 1:
+                print("You lose!")
+            if computer == 2:
+                print("You win!")
+        elif player == 1: #paper
+            if computer == 0:
+                print("You win!")
+            if computer == 1:
+                print("You draw.")
+            if computer == 2:
+                print("You lose!")
+        elif player == 2: #scissor
+            if computer == 0:
+                print("You lose!")
+            if computer == 1:
+                print("You win!")
+            if computer == 2:
+                print("You draw.")
+    else:
+        print("Invalid input. You lose.")
