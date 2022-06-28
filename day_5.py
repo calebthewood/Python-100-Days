@@ -19,7 +19,7 @@ def avg_student_height():
 
 def find_high_score():
     """
-    Accept a sequence of scores, returns highest score
+    Accept a sequence of scores, returns highest score.
     78 65 89 86 55 91 64 89 >>> 91
     """
     student_scores = input("Input a list of student scores ").split()
@@ -33,3 +33,10 @@ def find_high_score():
             high_score = score
 
     print(f"The highest score in the class is: {high_score}")
+
+def sum_evens():
+    """Sum evens between 0 and 100, no sum()"""
+    evens_sum = 0
+    for num in range(2, 101, 2):
+        evens_sum += num
+    print(evens_sum)
