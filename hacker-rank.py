@@ -41,3 +41,19 @@ def plusMinus(arr):
     print(positive_ratio)
     print(negative_ratio)
     print(zero_ratio)
+
+
+def staircase(n):
+    """
+    Builds an n by n, right-aligned 'staircase' of ' ' and '#'
+    """
+    staircase = ""
+    for i in range (1, n + 1):
+        space_count = n + 1 - i
+        for j in range (1, space_count):
+            staircase += " "
+        for k in range (space_count, n + 1):
+            staircase += "#"
+        staircase += "\n"
+
+    print(staircase)
