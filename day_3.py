@@ -132,28 +132,39 @@ def adventure_to_treasure_isalnd():
     print("Welcome to Treasure Island.")
     print("Your mission is to find the treasure.")
 
+    gameover = False
     choice_1 = input("You're walking along the trail, when you see a path branching off to the left. \n Do you go left or continue on the path to the right?\n (left/right) ").lower().strip()
 
     if choice_1 == "right":
         print("You fall in a pit of spikes.")
         print("Game Over.")
+        gameover = True
     else:
         print("You walk down an overgrown trail until emerging at a lake with an island in the middle...")
         choice_2 = input("Do you swim, or wait for the old man in the boat paddling towards you? \n(swim/wait) ").lower().strip()
         if choice_2 == "swim":
             print("You feel the water beneath you moving. The old man is shouting from his boat, but you can't make out the words.\n Something wraps around your ankle. An overwhelming pull drags you down as the surface of the water recedes into darkness.")
             print("Game Over.")
+            gameover = True
         else:
             print("The old man arrives, and agrees to ferry you across to the island.")
             choice_3 = input("You enter an old crypt, there are three doorways. Each a different color. One red, one yellow, one blue.\n Which color do you choose?\n (red/yellow/blue) ").lower().strip()
             if choice_3 == "red":
-                print("Fire fills the room.")
+                print("Fire fills the room, burning the flesh from your bones.")
                 print("Game Over.")
+                gameover = True
             elif choice_3 == "blue":
-                print("You hear a quiet patter of footsteps. As you turn, a snarl reverberates through the chamber. The beast consumes you.")
+                print("The cackling beast consumes you.")
                 print("Game Over.")
+                gameover = True
             elif choice_3 == "yellow":
                 print("You've found the treasure!")
                 print("You Win!")
             else:
                 print("You lose your way. Game Over.")
+    if (gameover):
+        restart = input("Enter 'yes' to restart or 'no' to exit\n")
+        if (restart == 'yes'):
+            adventure_to_treasure_isalnd()
+        else:
+            print("Thank you for playing.")

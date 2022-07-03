@@ -57,3 +57,35 @@ def staircase(n):
         staircase += "\n"
 
     print(staircase)
+
+
+def miniMaxSum(arr):
+    """
+    Takes a array of 5 positive ints. prints the min and max
+    sum possible from 4 elements.
+    """
+    min = arr[0]
+    max = arr[0]
+    sum = 0
+    for num in arr:
+        sum += num
+        if num < min:
+            min = num
+        if num > max:
+            max = num
+    print(f"{sum - max} {sum - min}")
+
+
+
+    def timeConversion(s):
+        """Convert 12 hour time to military time"""
+        hh, mm, ss = s.split(":")
+        am_pm = ss[2:4]
+        ss = ss[0:2]
+
+        if am_pm == 'PM':
+            mil_hh = hh if hh == "12" else str(int(hh) + 12)
+            return f"{mil_hh}:{mm}:{ss}"
+        else:
+            mil_hh = "00" if hh == "12" else hh
+            return f"{mil_hh}:{mm}:{ss}"
