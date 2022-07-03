@@ -77,9 +77,11 @@ def miniMaxSum(arr):
 
 
 def birthdayCakeCandles(candles):
+    """ Returns the frequency of the highest number in a list """
     frequencies = dict()
     max_count = 0
 
+    #python frequency counter
     for candle in candles:
         if candle in frequencies:
             frequencies[candle] +=1
