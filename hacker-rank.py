@@ -76,16 +76,32 @@ def miniMaxSum(arr):
     print(f"{sum - max} {sum - min}")
 
 
+def birthdayCakeCandles(candles):
+    frequencies = dict()
+    max_count = 0
 
-    def timeConversion(s):
-        """Convert 12 hour time to military time"""
-        hh, mm, ss = s.split(":")
-        am_pm = ss[2:4]
-        ss = ss[0:2]
-
-        if am_pm == 'PM':
-            mil_hh = hh if hh == "12" else str(int(hh) + 12)
-            return f"{mil_hh}:{mm}:{ss}"
+    for candle in candles:
+        if candle in frequencies:
+            frequencies[candle] +=1
         else:
-            mil_hh = "00" if hh == "12" else hh
-            return f"{mil_hh}:{mm}:{ss}"
+            frequencies[candle] = 1
+
+    for count in frequencies.values():
+        if count > max_count:
+            max_count = count
+
+    return max_count
+
+
+def timeConversion(s):
+    """Convert 12 hour time to military time"""
+    hh, mm, ss = s.split(":")
+    am_pm = ss[2:4]
+    ss = ss[0:2]
+
+    if am_pm == 'PM':
+        mil_hh = hh if hh == "12" else str(int(hh) + 12)
+        return f"{mil_hh}:{mm}:{ss}"
+    else:
+        mil_hh = "00" if hh == "12" else hh
+        return f"{mil_hh}:{mm}:{ss}"
