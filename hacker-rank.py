@@ -107,3 +107,26 @@ def timeConversion(s):
     else:
         mil_hh = "00" if hh == "12" else hh
         return f"{mil_hh}:{mm}:{ss}"
+
+
+def gradingStudents(grades):
+    """
+    Automate rounding up grades. Accepts a list of integers btwn 0 and 100
+    rounds up any grades above 37 and within 2 of the next multiple of 5
+    ex: 88 --> 90,
+        87 --> 87,
+        36 --> 36,
+        39 --> 40
+    returns array of rounded ints
+    """
+    rounded_grades = []
+    for grade in grades:
+        if grade > 37:
+            dif = 5 - (grade % 5)
+            if dif < 3:
+                rounded_grades.append(grade + dif)
+            else:
+                rounded_grades.append(grade)
+        else:
+            rounded_grades.append(grade)
+    return rounded_grades
