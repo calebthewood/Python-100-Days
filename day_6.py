@@ -24,3 +24,28 @@ while not at_goal():
         move()
     elif wall_in_front():
         jump()
+
+# Maze Code
+def in_open_space():
+    if right_is_clear() and front_is_clear():
+        turn_left()
+        turn_left()
+        if right_is_clear() and front_is_clear():
+            turn_left()
+            turn_left()
+            return True
+        else:
+            turn_left()
+            turn_left()
+    return False
+
+while not at_goal():
+    if in_open_space():
+        move()
+    if right_is_clear():
+        turn_right()
+        move()
+    elif front_is_clear():
+        move()
+    else:
+        turn_left()
