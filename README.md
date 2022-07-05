@@ -16,7 +16,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/calebthewood/Python-100-Days">
-    <img src="./public/python_logo.png" alt="python" width="600">
+    <img src="./public/zw8z698x5u271.webp" alt="python-meme" width="500">
   </a>
 
 <h1 align="center">Caleb's Python Repo</h1>
@@ -33,9 +33,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[100 Days of Python]()
+[100 Days of Python](https://github.com/calebthewood/Python-100-Days/tree/main/100_days)
 
-[HackerRank]()
+[HackerRank](https://github.com/calebthewood/Python-100-Days/blob/main/hacker-rank.py)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -66,7 +66,7 @@
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@calebthewood](https://twitter.com/calebthewood)
+Caleb Wood - [@calebthewood](https://twitter.com/calebthewood)
 
 Project Link: [https://github.com/calebthewood/Python-100-Days](https://github.com/calebthewood/Python-100-Days)
 
@@ -82,7 +82,7 @@ Project Link: [https://github.com/calebthewood/Python-100-Days](https://github.c
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<img src="./public/zw8z698x5u271.webp" alt="python" width="400">
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
