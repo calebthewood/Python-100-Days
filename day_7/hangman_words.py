@@ -1,3 +1,4 @@
+#todo: add hints or categories or something to make it a little easier :)
 word_list = [
 'abruptly',
 'absurd',
