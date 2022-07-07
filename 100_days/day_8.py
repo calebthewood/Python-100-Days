@@ -24,3 +24,6 @@ def prime_checker(number):
 
 n = int(input("Check this number: "))
 prime_checker(number=n)
+#write a prime number bot,
+    #periodically tweets out prime #'s
+    #can tweet number at it and it will respond with whether or not the num is prime.
