@@ -22,7 +22,7 @@
 <h1 align="center">Caleb's Python Repo</h1>
 
   <p align="center">
-    This repo holds my 100 days of python content, but also stores solutions from algo challenges solved in Python, and any miscellaneous scripts I've written that don't belong anywhere else. So far, the coolest thing in here is probably the hangman game.
+    This repo holds my 100 days of python content, but also stores solutions from algo challenges solved in Python, and any miscellaneous scripts I've written that don't belong anywhere else.
     <br />
   </p>
 </div>

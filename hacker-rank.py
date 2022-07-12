@@ -130,3 +130,34 @@ def gradingStudents(grades):
         else:
             rounded_grades.append(grade)
     return rounded_grades
+
+
+def countApplesAndOranges(s, t, a, b, apples, oranges):
+    """
+    Calculates the inclusive range of apples and oranges that
+    fall between points 's' and 't' from 'a' (apples point of origin)
+    and 'b' (oranges point of origin)
+
+    The function accepts following parameters:
+    1. INTEGER s
+    2. INTEGER t
+    3. INTEGER a
+    4. INTEGER b
+    5. INTEGER_ARRAY apples
+    6. INTEGER_ARRAY oranges
+    """
+    apple_count = 0
+    orange_count = 0
+
+    for apple in apples:
+        position = a + apple
+        if position >= s and position <= t:
+            apple_count += 1
+
+    for orange in oranges:
+        position = b + orange
+        if position >= s and position <= t:
+            orange_count += 1
+
+    print(apple_count)
+    print(orange_count)
