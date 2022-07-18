@@ -161,3 +161,23 @@ def countApplesAndOranges(s, t, a, b, apples, oranges):
 
     print(apple_count)
     print(orange_count)
+
+
+def breakingRecords(scores):
+    """
+    Calculates the number of times the min or max get's updated
+    """
+    lo_score = scores[0]
+    hi_score = scores[0]
+    lo_count = 0
+    hi_count = 0
+
+    for score in scores:
+        if score > hi_score:
+            hi_score = score
+            hi_count += 1
+        if score < lo_score:
+            lo_score = score
+            lo_count += 1
+
+    return [hi_count, lo_count]
