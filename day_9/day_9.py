@@ -40,3 +40,14 @@ for student in student_scores:
         student_grades[student] = "Fail"
 
 print(student_grades)
+
+travel_log = {
+    "france": {
+        "cities_visited": ["Paris", "Lille", "Dijon"],
+        "total_visits": 12
+        },
+    "germany": {
+        "cities_visited": ["berlin", "stutgard"],
+        "total_visits": 2
+    }
+}
